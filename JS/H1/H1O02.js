@@ -13,7 +13,7 @@ function draw() {
   fill('purple');
   triangle(0,0,0,450,450,225);
   strokeWeight(5);
-stroke('pink');
+stroke('blue');
 fill('darkred');
 beginShape();
 vertex(225,115);
