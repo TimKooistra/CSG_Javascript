@@ -25,9 +25,10 @@ function draw() {
   translate(0,40);  
   rect(0,0,100,100);  
   // EINDE aanpassing
-  
+  push();
   translate(140,0);
   rect(0,0,100,100);
+  pop();
   translate(140,0);
   rect(0,0,100,100);  
 }
