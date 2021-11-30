@@ -1,5 +1,6 @@
 var horizontaalA = 120;
 var verticaal = 170;
+var horizontaalB = 500;
 
 function setup() {
   canvas = createCanvas(1000,300);
@@ -8,7 +9,7 @@ function setup() {
   textSize(30);
   stroke('white');
   strokeWeight(10);
-  frameRate(10);
+  frameRate(100);
 }
 
 function draw() {
@@ -20,4 +21,7 @@ function draw() {
   fill('dodgerblue');
   ellipse(horizontaalA,verticaal,200);
   horizontaalA += 2;
+  fill('darkred');
+  ellipse(horizontaalB, verticaal,200);
+  horizontaalB += 1;
 }
