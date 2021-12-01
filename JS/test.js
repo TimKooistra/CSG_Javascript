@@ -1,14 +1,24 @@
 function setup() {
   canvas = createCanvas(450,450);
-  background('silver');
+  background('lightblue');
   canvas.parent('processing');
   //noLoop();
 }
 
+function TekenKerk(hoogte) {
+  noStroke();
+  fill('red');
+  rect(0,350,75,hoogte);
+  fill('grey');
+  triangle(0,350,75,350,37,310);
+}
+
+
 function draw() {
   noStroke();
-  fill('steelblue');
-  ellipse(0,0,800);
-  fill('deepskyblue');
-  ellipse(450,450,400);
+  TekenKerk(300);
+  translate(100,-100);
+  TekenKerk(275);
+  translate(100,-100);
+  TekenKerk(350);
 }
