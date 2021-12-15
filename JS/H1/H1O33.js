@@ -26,5 +26,7 @@ function tekenTegel(x,y,s) {
   triangle(0,50,25,25,25,50);
   fill('green');
   rect(25,25,25,25);
+  fill('yellow')
+  rect(10,10,10,10)
   pop();
 }
