@@ -1,24 +1,40 @@
+var yPositie = 200
 function setup() {
-  canvas = createCanvas(450,450);
-  background('lightblue');
+  canvas = createCanvas(600,300);
   canvas.parent('processing');
   //noLoop();
 }
 
-function TekenKerk(hoogte) {
+function draw(){ 
   noStroke();
-  fill('red');
-  rect(0,350,75,hoogte);
-  fill('grey');
-  triangle(0,350,75,350,37,310);
+  background('cyan');
+    if (mouseY > 200) {
+    fill('orange')
+  }
+  else 
+  { 
+    fill('yellow');
+  }
+
+  ellipse(width/2,yPositie,200)
+  fill('brown');
+  rect(0,200,600);
+
+  translate(40,100)
+
+  for (var n = 0;n < 4;n++) {
+  tekenHuis();
+  translate(100,0);
+  }
+  
+
 }
+function tekenHuis(){
+  push();
+  fill('red');
+  triangle(40,0,0,50,80,50);
+  fill('gray');
+  rect(0,50,80,80);
+  pop();
 
-
-function draw() {
-  noStroke();
-  TekenKerk(300);
-  translate(100,-100);
-  TekenKerk(275);
-  translate(100,-100);
-  TekenKerk(350);
 }
